@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ genero.nombre }} - Películas{% endblock %}
+
+{% block contenido %}
+<div class="genre-detail-container">
+    <h1>{{ genero.nombre }}</h1>
+    <!-- Mostrar la descripción del género -->
+    {% if genero.descripcion %}
+        <p class="genre-description">{{ genero.descripcion }}</p>
+    {% else %}
+        <p class="genre-description">No hay una descripción disponible para este género.</p>
+    {% endif %}
+    <h2>Películas en este género</h2>
+
+    <div class="movie-grid">
+        {% for pelicula in genero.pelicula_set.all %}
+            <div class="movie-card">
+                <a href="{% url 'detalle_pelicula' pelicula.id %}">
+                    <div class="title-overlay">
+                        <h3>{{ pelicula.titulo }}</h3>
+                    </div>
+                    <div class="hover-overlay">
+                        <p>Duración: {{ pelicula.duracion }} min</p>
+                    </div>
+                    <img src="{{ pelicula.portada.url }}" alt="{{ pelicula.titulo }}" class="movie-image">
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="back-button-container">
+    <a href="{% url 'lista_generos' %}" class="back-button">Volver a lista de géneros</a>
+</div>
+{% endblock %}

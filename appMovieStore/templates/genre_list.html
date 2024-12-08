@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Lista de Géneros{% endblock %}
+
+{% block contenido %}
+<h1 class="titulo-pagina">Lista de Géneros</h1>
+<div class="generos-grid">
+    {% for genero in generos %}
+        <div class="genero-item">
+            <a href="{% url 'detalle_genero' genero.id %}">
+                <div class="genero-imagen" style="background-image: url('{{ genero.foto.url }}');">
+                    <div class="overlay">
+                        <span class="genero-nombre">{{ genero.nombre }}</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

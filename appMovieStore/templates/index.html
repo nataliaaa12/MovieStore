@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Películas Más Recientes{% endblock %}
+
+{% block contenido %}
+<div class="recent-movies-wrapper">
+
+    <h1 class="titulo-peliculas">Lista de películas más recientes</h1>
+
+    <div class="movie-list-container">
+        <div class="recent-movie-grid">
+            {% for pelicula in peliculas_recientes %}
+                <div class="recent-movie-card">
+                    <a href="{% url 'detalle_pelicula' pelicula.id %}">
+                        <img src="{{ pelicula.portada.url }}" alt="{{ pelicula.titulo }}" class="recent-movie-image">
+                    </a>
+                    <div class="recent-movie-info">
+                        <h3>{{ pelicula.titulo }}</h3>
+                        <p><strong>Duración:</strong> {{ pelicula.duracion }} min</p>
+                    </div>
+                    <div class="recent-movie-genre">{{ pelicula.genero.nombre }}</div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="view-all-movies-btn-wrapper">
+        <a href="{% url 'lista_peliculas' %}" class="btn-view-all">Ver Todas las Películas Disponibles</a>
+    </div>
+</div>
+{% endblock %}

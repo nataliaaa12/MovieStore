@@ -1,0 +1,54 @@
+[
+  {
+    "model": "appMovieStore.pelicula",
+    "pk": 19,
+    "fields": {
+      "titulo": "Mamma mia!",
+      "descripcion": "Una joven que ha crecido en una pequeña isla griega, ha sido educada por una madre rebelde y poco convencional, que siempre se ha negado a revelarle la identidad de su padre. Cuando, por fin, parece que la joven está a punto de saberlo, aparecen tres posibles candidatos.",
+      "duracion": 108,
+      "fecha_estreno": "2008-08-13",
+      "genero": 3,
+      "portada": "portadas/mammamia.jpg",
+      "trailer": "https://youtu.be/8RBNHdG35WY?feature=shared",
+      "directores": [8]
+    }
+  },
+  {
+    "model": "appMovieStore.pelicula",
+    "pk": 20,
+    "fields": {
+      "titulo": "El lugar de la esperanza",
+      "descripcion": "Sandra es una joven madre soltera que un día decide abandonar a su abusivo ex marido y luchar contra el corrupto sistema inmobiliario.",
+      "duracion": 97,
+      "fecha_estreno": "2001-09-10",
+      "genero": 5,
+      "portada": "portadas/esperanza.jpg",
+      "trailer": "https://www.youtube.com/watch?v=yfd4GcaOvSY" ,
+      "directores": [8]
+    }
+  },
+  {
+    "model": "appMovieStore.pelicula",
+    "pk": 21,
+    "fields": {
+      "titulo": "La dama de hierro",
+      "descripcion": "Margaret Thatcher, una mujer de origen humilde que fue capaz de derribar todas las barreras de su clase social y de su género de mujer, para convertirse en una dirigente política poderosa.",
+      "duracion": 95,
+      "fecha_estreno": "2007-01-05",
+      "genero": 1,
+      "portada": "portadas/damaHierro.jpg",
+      "trailer": "https://www.youtube.com/watch?v=wtscJqh8FqY" ,
+      "directores": [8]
+    }
+  },
+  {
+    "model": "appMovieStore.director",
+    "pk": 8,
+    "fields": {
+      "nombre": "Phyllida Lloyd",
+      "descripcion": "Directora británica conocida por su trabajo en cine, destacando especialmente en el género musical.",
+      "mensaje": "Phyllida Lloyd es una directora que brilla al dar vida a historias profundamente emocionales y musicales inolvidables. Lloyd combina una dirección visual vibrante con una narrativa que resalta el poder y la vulnerabilidad humana. Su habilidad para capturar la energía de grandes actuaciones y llevarlas al corazón del público la posiciona como una figura destacada en el cine contemporáneo. 🎭 Canciones, emociones y actuaciones impactantes te esperan con Phyllida Lloyd.",
+      "foto": "images/directores/phyllida.jpg"
+    }
+  }
+]
